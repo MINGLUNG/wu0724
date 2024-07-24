@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小白鼠小奇的奇妙冒險</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        h1, h2 {
+            color: #1e90ff;
+            text-align: center;
+        }
+        .story, .question {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .question {
+            background-color: #e6f3ff;
+        }
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .hidden {
+            display: none;
+        }
+        #progressBar {
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        #progress {
+            width: 0%;
+            height: 30px;
+            background-color: #4CAF50;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>小白鼠小奇的奇妙冒險</h1>
+    
+    <div id="progressBar">
+        <div id="progress">0%</div>
+    </div>
+
+    <div id="story1" class="story">
+        <h2>第一章：神秘的房間</h2>
+        <p>從前有一隻名叫小奇的小白鼠,牠生活在一個神奇的城堡裡。有一天,小奇醒來發現自己被困在了一個奇怪的房間裡。</p>
+        <p>"這是哪裡?"小奇好奇地四處張望。牠看到房間裡有一個閃亮的桿子,一個小燈泡,還有一個奇怪的盒子。</p>
+        <p>突然,小奇感到肚子咕咕叫。"我好餓啊!"小奇想著,"這裡有沒有食物呢?"</p>
+    </div>
+    
+    <div id="question1" class="question">
+        <p>問題1: 你認為小奇應該先做什麼?</p>
+        <button onclick="checkAnswer(1, 'A')">A. 躺下睡覺</button>
+        <button onclick="checkAnswer(1, 'B')">B. 按下閃亮的桿子</button>
+        <button onclick="checkAnswer(1, 'C')">C. 敲敲奇怪的盒子</button>
+    </div>
+
+    <div id="story2" class="story hidden">
+        <h2>第二章：意外的發現</h2>
+        <p>小奇鼓起勇氣,伸出爪子按下了閃亮的桿子。突然,奇蹟發生了!一顆香噴噴的乳酪從天而降,落在小奇面前。</p>
+        <p>"哇!太神奇了!"小奇驚呼道。牠開心地吃完乳酪,感到精力充沛。</p>
+        <p>不久後,小奇又餓了。牠記得按下桿子會有食物,於是再次按下...</p>
+    </div>
+
+    <div id="question2" class="question hidden">
+        <p>問題2: 小奇再次按下桿子是因為什麼?</p>
+        <button onclick="checkAnswer(2, 'A')">A. 好奇心</button>
+        <button onclick="checkAnswer(2, 'B')">B. 學習經驗</button>
+        <button onclick="checkAnswer(2, 'C')">C. 偶然行為</button>
+    </div>
+
+    <div id="story3" class="story hidden">
+        <h2>第三章：學習的過程</h2>
+        <p>小奇發現,每次按下桿子都能得到食物。牠不再需要到處尋找,每當肚子餓了就去按桿子。</p>
+        <p>漸漸地,小奇學會了在這個神奇的房間裡生存。牠變得越來越聰明,按桿子的動作也越來越熟練。</p>
+        <p>有一天,小奇注意到房間裡的小燈泡會在牠按下桿子之前亮起...</p>
+    </div>
+
+    <div id="question3" class="question hidden">
+        <p>問題3: 小奇學會按桿子獲取食物的過程屬於哪種學習方式?</p>
+        <button onclick="checkAnswer(3, 'A')">A. 觀察學習</button>
+        <button onclick="checkAnswer(3, 'B')">B. 操作制約</button>
+        <button onclick="checkAnswer(3, 'C')">C. 古典制約</button>
+    </div>
+
+    <div id="story4" class="story hidden">
+        <h2>第四章：新的發現</h2>
+        <p>小奇發現,每次小燈泡亮起後,按下桿子就會有食物出現。牠開始在燈亮時立即按桿子。</p>
+        <p>"真有趣!"小奇想,"這個房間裡還有什麼秘密呢?"</p>
+        <p>突然,小奇聽到奇怪的盒子發出聲音。牠好奇地湊近一看...</p>
+    </div>
+
+    <div id="question4" class="question hidden">
+        <p>問題4: 在這個故事中,什麼是增強物?</p>
+        <button onclick="checkAnswer(4, 'A')">A. 閃亮的桿子</button>
+        <button onclick="checkAnswer(4, 'B')">B. 乳酪</button>
+        <button onclick="checkAnswer(4, 'C')">C. 小燈泡</button>
+    </div>
+
+    <div id="story5" class="story hidden">
+        <h2>最終章：小奇的成長</h2>
+        <p>經過一段時間的學習,小奇成為了一隻聰明又快樂的小白鼠。牠不僅學會了按桿子獲取食物,還能根據燈光信號預測食物的出現。</p>
+        <p>有一天,神奇的房間的門突然打開了。小奇看到外面是一個更大的世界。</p>
+        <p>"我學到了這麼多,"小奇想,"現在是時候去探索更大的世界了!"</p>
+    </div>
+
+    <div id="finalQuestion" class="question hidden">
+        <p>最後的問題: 小奇在這個故事中學到了什麼重要的東西?</p>
+        <button onclick="checkAnswer(5, 'A')">A. 只有待在安全的地方才能生存</button>
+        <button onclick="checkAnswer(5, 'B')">B. 通過嘗試和學習可以適應新環境</button>
+        <button onclick="checkAnswer(5, 'C')">C. 依賴他人是最好的生存方式</button>
+    </div>
+
+    <script>
+        let progress = 0;
+        const totalQuestions = 5;
+
+        function updateProgress() {
+            progress += 20;
+            document.getElementById('progress').style.width = progress + '%';
+            document.getElementById('progress').innerText = progress + '%';
+        }
+
+        function checkAnswer(questionNumber, answer) {
+            let correctAnswer;
+            let explanation;
+
+            switch(questionNumber) {
+                case 1:
+                    correctAnswer = 'B';
+                    explanation = '做得好!小奇應該嘗試新事物來尋找食物。';
+                    break;
+                case 2:
+                    correctAnswer = 'B';
+                    explanation = '沒錯!小奇是根據之前的經驗再次按下桿子的。';
+                    break;
+                case 3:
+                    correctAnswer = 'B';
+                    explanation = '太棒了!這就是操作制約學習。';
+                    break;
+                case 4:
+                    correctAnswer = 'B';
+                    explanation = '正確!乳酪就是增強物,促使小奇重複按桿子的行為。';
+                    break;
+                case 5:
+                    correctAnswer = 'B';
+                    explanation = '完全正確!小奇學會了通過嘗試和學習來適應新環境。';
+                    break;
+            }
+
+            if (answer === correctAnswer) {
+                alert('答對了! ' + explanation);
+                updateProgress();
+                showNextSection(questionNumber);
+            } else {
+                alert('再想想看? ' + explanation);
+            }
+        }
+
+        function showNextSection(questionNumber) {
+            document.getElementById('story' + (questionNumber + 1)).classList.remove('hidden');
+            document.getElementById('question' + (questionNumber + 1)).classList.remove('hidden');
+            
+            if (questionNumber === 4) {
+                document.getElementById('story5').classList.remove('hidden');
+                document.getElementById('finalQuestion').classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
